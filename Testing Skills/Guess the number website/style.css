@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	border:  0;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 50px;
+	box-sizing: border-box;
+}
+body{
+	margin-right: 12%;
+	margin-left: 12%;
+	margin-top: 20px;
+}
+hr{
+	border: 2px solid #656565;
+	width: 75%;
+}form{
+	padding: 10px;
+	border: 2px solid #656565;
+	float: left;
+}
+input{
+	margin-bottom: 0px;
+}
+input[type="text"]{
+	
+	width: 450px;
+}
+input[type="text"]:focus{
+	outline: none;
+}
+
