@@ -9,23 +9,25 @@ body{
 	margin-right: 12%;
 	margin-left: 12%;
 	margin-top: 20px;
+	background-color: #2D2D2D;
+	color:white;
 }
 hr{
-	border: 2px solid #656565;
-	width: 75%;
-}form{
-	padding: 10px;
-	border: 2px solid #656565;
-	float: left;
+	border: 2px solid #aaa;
+	width: 100%;
 }
 input{
 	margin-bottom: 0px;
 }
 input[type="text"]{
-	
+	background-color: #2D2D2D;
 	width: 450px;
+	color: white;
 }
 input[type="text"]:focus{
 	outline: none;
 }
+ input::placeholder{
+ 	color: #ddd;
+ }
 

@@ -1,7 +1,7 @@
 var response = document.getElementById("response")
-var randNum = parseInt(Math.random() * 100 + 1);
+var randNum = parseInt(Math.random() * 100);
 window.addEventListener("keypress", myEventHandler, false);
-console.log(randNum)
+// console.log(randNum)
 
     
 function myEventHandler(e) {
@@ -10,7 +10,7 @@ function myEventHandler(e) {
 
     if (keyCode == 13) {
         var input = document.getElementById("answer").value
-        if (input <= 100 && input >= 1) {
+        if (input < 100 && input >= 0 && input != null) {
             if (input > randNum) {
                 response.innerHTML = "Your guess is too high";
             } else if (input < randNum){
