@@ -1,17 +1,35 @@
 var geneLength = 15
+var populationSize = 20
 
-
-
-var argument1 = {
-    genes : "",
-    randomizeGenes : function() {
-        var dna = ''
-        for (var i = 0; i < geneLength; i++) {
-            dna += parseInt(Math.random() * 2)
-            console.log(dna)
-        }
-        return dna
-    }
+function individual () {
+	this.dna = geneRandomizer()
 }
 
-var j = new Individual()
+function geneRandomizer() {
+  	var dna = ""
+  	for(var i = 0; i < geneLength;i++){
+  		dna += parseInt(Math.random() * 2)
+  	}
+  	// console.log('Gene Randomizer: working')
+  	return dna
+}
+function createIndividuals(){
+	var individuals = []
+	for(var i = 0;i< populationSize;i++){
+		individuals[i]  = new individual()
+	}
+	return individuals
+}
+function calculateFitness(){
+	
+}
+
+var individuals = createIndividuals()
+
+while(maxFitness != geneLength){
+
+	calculateFitness()
+
+	parentalSelection()
+	reproduce
+}
