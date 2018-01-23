@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>yeee</title>
+</head>
+<body>
+	<h1>A Basic Form</h1>
+	<form action="#" >
+		<fieldset>
+			<legend>Student Information</legend>
+			<fieldset>
+				<legend>General</legend>
+				<label for="username">Name:</label>
+				<input id="username" type="text" name="name" value="" placeholder="name">
+				<p style="display: inline;">Birthday: </p>
+				<input id="birthdate" type="date" name="bday" style="display: inline;" value="2000-01-01">
+				<label for="grade">Grade: </label>
+				<input id='grade' type="number" name="grade" step="1" style="display: inline;" value="10" min="9" max="12">
+			</fieldset>
+			<fieldset>
+				<legend>contact</legend>
+				<label for="phoneNum">Phone:</label>
+				<input type="text" id="phoneNum" name="number" placeholder="442-248-7020">
+				<br>
+				<br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" >
+			</fieldset>
+			<fieldset>
+				<legend>Personal</legend>
+				<label for="state">Residence:</label>
+						<select id="state" name="state">
+							<option selected="selected" value="Home">Home</option>
+							<option value="Appt">appt</option>
+							
+						</select>
+				<br>
+				<label for="cheese">Drivers License</label>
+						<input type="checkbox" id="cheese" name="toppings" value="">
+						<br>
+				
+	Eating:			
+	 <input type="radio" id="ham" name="meat" value="ham">  
+<label for="ham">Vegan</label>
+                             
+<input type="radio" id="sausage" name="meat" value="sausage">
+<label for="sausage">Vegitarian</label>
+                             
+<input type="radio" checked="checked" id="nomeat" name="meat" value="nomeat">
+<label for="nomeat">Omnivore</label>
+<input type="radio" checked="checked" id="a" name="meat" value="nomeat">
+<label for="a">Carnivore</label>
+
+
+			</fieldset>
+			coments:
+			<br>
+			<textarea rows="7"></textarea>
+			<br>
+			<input type="submit">
+			<input type="reset">
+		</fieldset>
+	</form>
+
+</body>
+</html>
