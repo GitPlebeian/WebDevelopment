@@ -1,19 +1,39 @@
-var target = "hello, world"
-var popSize = 20
+var target = "To be or not to be"
+var popSize = 150
+//Mutation chance out of 10,000
+var mutationChance = 150
+var mutateOnEveryGene = true
 
 
-function individual () {
-	this.dna = chromosomeRandomizer()
-	this.fittness = 0
+class individual {
+	constructor(){
+		this.dna = chromosomeRandomizer()
+		this.fittness = 0
+	}
+	changeDna(index,char){
+		var str = ''
+		for(var i = 0;i < this.dna.length;i++){
+			if(i == index){
+				str += char
+			}else{
+				str += this.dna.charAt(i)
+			}
+		}
+		this.dna = str
+	}
 }
 
 function chromosomeRandomizer(){
-		var possible = '`1234567890-=qwertyuiop[]asdfghjkl;zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:ZXCVBNM<>?'
+		var possible = '`1234567890-=qwertyuiop[]asdfghjkl; zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:ZXCVBNM<>?'
 		var str = ""
 		for(var i = 0;i < target.length;i++){
 			str += possible.charAt(parseInt(Math.random() * possible.length))
 		}
 		return str
+}
+function mutate(){
+		var possible = '`1234567890-=qwertyuiop[]asdfghjkl; zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:ZXCVBNM<>?'
+		return possible.charAt(parseInt(Math.random() * possible.length))
 }
 function createIndividuals() {
 	var temp = []
@@ -23,53 +43,81 @@ function createIndividuals() {
 	return temp
 }
 function logInfo(){
-	for(var i = 0;i<individual.length;i++){
-		console.log(individual[i].dna  + " " + individual[i].fittness)
-	}
+	console.log(generation);
+	// for(var i = 0;i<population.length;i++){
+	// 	console.log(population[i].dna  + " " + population[i].fittness)
+	// }
+	// console.log("");
+	console.log(fittestIndivdual.dna  + " " + fittestIndivdual.fittness)
+	console.log("");
 }
 function calculateFitness(){
-	for(var i = 0;i < individual.length;i++){
-		individual[i].fittness = 0
+	for(var i = 0;i < population.length;i++){
+		population[i].fittness = 0
 		for(var k = 0;k < target.length;k++){
-			if(individual[i].dna.charAt(k) == target.charAt(k))
-				individual[i].fittness++
+			if(population[i].dna.charAt(k) == target.charAt(k))
+				population[i].fittness++
 		}
+	}
+	fittestIndivdual = population[0]
+	for(var h = 0; h < population.length;h++){
+		if(population[h].fittness > fittestIndivdual.fittness)
+			fittestIndivdual = population[h]
 	}
 }
 function selection(){
+	calculateFitness()
 	var temp = []
-	for(var l = 0;l < individual.length;l++){
+	for(var l = 0;l < population.length;l++){
 		var pool = []
-		for(var i = 0;i < individual.length;i++){
-			var n = (individual[i].fittness / target.length * 100)
-			
+		for(var i = 0;i < population.length;i++){
+			var n = (population[i].fittness / target.length * 100)
 			var g = 0
 			do{
-				pool.push(individual[i])
+				pool.push(population[i])
 				g++
-				
+
 			}while(g < n - 1)
+
 		}
+		// console.log(pool);
+		// console.log('');
 		var one = pool[parseInt(Math.random()*pool.length)]
 		var two = pool[parseInt(Math.random()*pool.length)]
-		var t = new individual()
+		var child = new individual()
 		while(two == one){
 			two = pool[parseInt(Math.random()*pool.length)]
 		}
-
-		for(var i = 0;i < target.length;i++){
-				g.dna.charAt(i) = two.dna.charAt(i)
-			
+		for(var k = 0;k < target.length;k++){
+			if(mutateOnEveryGene){
+				if(parseInt(Math.random() * 10000) <= mutationChance){
+					child.changeDna(k,mutate())
+				}
+				else if(parseInt(Math.random() * 2) == 0){
+					child.changeDna(k,one.dna.charAt(k))
+				}
+				else {
+					child.changeDna(k,two.dna.charAt(k))
+				}
+			}
 		}
-		temp[l] = g
+		// console.log(one);
+		// console.log(two);
+		// console.log("");
+		// console.log(child);
+		// console.log("");
+		temp[l] = child
 	}
-	individual = temp
-
-
+	population = temp
+	calculateFitness()
 }
-var individual = createIndividuals()
+var generation = 0
+var population = createIndividuals()
+var fittestIndivdual
 calculateFitness()
-
-selection()
-
-logInfo()
+while(fittestIndivdual.fittness != target.length || generation == 100000){
+	selection()
+	logInfo()
+	generation++
+}
+console.log('Completed in ' + generation)+ ' generations.';
