@@ -1,8 +1,10 @@
-var target = "To be or not to be"
-var popSize = 150
+var trueStart = new Date().getTime();
+var target = "The Cake"
+var popSize = 200
 //Mutation chance out of 10,000
-var mutationChance = 150
+var mutationChance = 30
 var mutateOnEveryGene = true
+var numTimesToCycle = 10
 
 
 class individual {
@@ -111,13 +113,33 @@ function selection(){
 	population = temp
 	calculateFitness()
 }
-var generation = 0
-var population = createIndividuals()
-var fittestIndivdual
-calculateFitness()
-while(fittestIndivdual.fittness != target.length || generation == 100000){
-	selection()
-	logInfo()
-	generation++
+
+var cycleTimes = []
+for(var p = 0;p < numTimesToCycle;p++){
+	var start = new Date().getTime();
+	var generation = 0
+	var population = createIndividuals()
+	var fittestIndivdual
+	calculateFitness()
+	while(fittestIndivdual.fittness != target.length || generation == 100000){
+		selection()
+		//logInfo()
+		generation++
+	}
+	var end = new Date().getTime();
+	console.log('Completed in ' + generation)+ ' generations.';
+	console.log("")
+	cycleTimes.push(end - start)
+
 }
-console.log('Completed in ' + generation)+ ' generations.';
+var averageTime = 0
+for(var y = 0; y < cycleTimes.length;y++){
+	averageTime += cycleTimes[y]
+	console.log(cycleTimes[y])
+}
+console.log("")
+console.log((averageTime / cycleTimes.length) / 1000 + " seconds is the averageTime")
+
+var trueEnd = new Date().getTime();
+console.log("")
+console.log("Whole Process took " + ((trueEnd - trueStart) / 1000) + " seconds")
