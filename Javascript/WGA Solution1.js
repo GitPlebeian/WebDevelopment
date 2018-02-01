@@ -117,6 +117,7 @@ function selection(){
 
 var cycleTimes = []
 for(var p = 0;p < numTimesToCycle;p++){
+  var fittestNumber = 0;
 	var start = new Date().getTime();
 	var generation = 0
 	var population = createIndividuals()
