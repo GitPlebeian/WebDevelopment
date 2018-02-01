@@ -4,6 +4,9 @@ function setup() {
   frameRate(60)
 }
 function draw() {
-  fill(255)
-  rect(mouseX,mouseY)
+	if(mouseIsPressed)
+	{
+	fill(255)
+  	rect(mouseX,mouseY,130,1000)
+	}
 }
