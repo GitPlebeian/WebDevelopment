@@ -1,5 +1,5 @@
 var trueStart = new Date().getTime();
-var target = "Formidable"
+var target = "To be or not to be, that is the question."
 var popSize = 200
 //Mutation chance out of 10,000
 var mutationChance = 20
@@ -47,10 +47,10 @@ function createIndividuals() {
 }
 function logInfo(){
 	console.log(generation);
-	// for(var i = 0;i<population.length;i++){
-	// 	console.log(population[i].dna  + " " + population[i].fittness)
-	// }
-	// console.log("");
+	 for(var i = 0;i<population.length;i++){
+	 	console.log(population[i].dna  + " " + population[i].fittness)
+	 }
+	 console.log("");
 	console.log(fittestIndivdual.dna  + " " + fittestIndivdual.fittness)
 	console.log("");
 }
@@ -124,7 +124,7 @@ for(var p = 0;p < numTimesToCycle;p++){
 	calculateFitness()
 	while(fittestIndivdual.fittness != target.length || generation == 100000){
 		selection()
-		//logInfo()
+		logInfo()
 		generation++
 	}
 	var end = new Date().getTime();
