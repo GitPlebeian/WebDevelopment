@@ -31,7 +31,7 @@ body{
   display: none;
 }
 @media screen and (max-width: 576px) {
-  .navBar a:not(:first-child) {display: none;}
+  .navBar a:not(.main) {display: none;}
   .navBar a.icon {
     float: right;
     display: inline-block;
