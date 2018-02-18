@@ -1,7 +1,7 @@
 body{
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 .navBar{
   background-color: #666;
@@ -31,13 +31,18 @@ body{
   display: none;
 }
 @media screen and (max-width: 576px) {
+  body{
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    font-size-adjust: none;
+  }
   .navBar a:not(:first-child) {display: none;}
   .navBar a.icon {
     float: right;
     display: inline-block;
   }
-}
-@media screen and (max-width: 576px) {
   .navBar.responsive {position: relative;}
   .navBar.responsive .icon {
     position: absolute;
