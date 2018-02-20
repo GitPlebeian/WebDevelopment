@@ -4,7 +4,7 @@ body{
   font-size: 1.25em;
 }
 .navBar{
-  background-color: #666;
+  background-color: #6a6a6a;
   overflow: hidden;
 }
 .navBar a{
@@ -13,14 +13,14 @@ body{
   float: left;
   color: #fff;
   text-align: center;
-  padding: 14px;
+  padding: 14px 16px;
 }
 .navBar a:hover{
   color: #000;
   background-color: white;
 }
 .navBar a.main{
-  background-color: #40bf8e;
+  background-color: #40bf8e; // Colors main element
   color: black;
 }
 .navBar a.main:hover{
@@ -29,6 +29,31 @@ body{
 }
 .navBar a.icon{
   display: none;
+}
+button{
+  border: none;
+  padding: 0;
+  background: none;
+  float: right;
+  width: 44px;
+  height: 34px;
+  position: relative;
+}
+.navIconBar{
+  left: 25%;
+  display: block;
+  background-color: red;
+  width: 22px;
+  height: 2px;
+  position: absolute;
+}
+.navIconBar:nth-child(1){
+}
+.navIconBar:nth-child(2){
+  top: 5px;
+}
+.navIconBar:nth-child(3){
+  top: 22px;
 }
 @media screen and (max-width: 576px) {
   body{
