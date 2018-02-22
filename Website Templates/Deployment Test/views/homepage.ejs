@@ -10,25 +10,18 @@
   <body>
     <div class="navBar" id="navBar">
       <a href="#" class="main">Home</a>
-      <a href="#">Shop</a>
-      <a href="#">Locations</a>
+      <a href="#">Website Templates</a>
       <a href="#">Contact</a>
-      <div class="navIconButton">
-        <!-- <p>;alsdkfj;lkj</p> -->
+      <a href="#">About</a>
+      <div class="navIconButton" onclick="navIconClick()">
         <span class="navIconBar"></span>
         <span class="navIconBar"></span>
         <span class="navIconBar"></span>
       </div>
     </div>
-    <script>
-    function myFunction() {
-        var x = document.getElementById("navBar");
-        if (x.className === "navBar") {
-            x.className += " responsive";
-        } else {
-            x.className = "navBar";
-        }
-    }
-    </script>
+    <div class="content" onclick="focusContent()">
+      <!-- <img src="/images/jax.png" alt=""> -->
+    </div>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>
