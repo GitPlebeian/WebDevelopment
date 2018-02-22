@@ -9,6 +9,16 @@ var info = {"name":"Joe"}
 app.get("/request", function(req, res){
 	res.json(info);
 });
+var info = {"name":"Joe"}
+app.get("/request", function(req, res){
+	res.json(info);
+
+	response.sendFile(__dirname + "/index.html")response.sendFile(__dirname + "/index.html");
+
+});var info = {"name":"Joe"}
+app.get("/request", function(req, res){
+	res.json(info);
+});
 var info2 = {"fred":"Stuff"}
 app.get("/another", function(req, res){
 	res.json(info2);
