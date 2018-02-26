@@ -11,7 +11,8 @@ h1{
   font-weight: normal;
 }
 img{
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
   height: auto;
 }
 /* NAVBAR STUFF */
@@ -158,7 +159,7 @@ img{
 }
 
 @media (max-width: 768px ) and (min-width: 577px) {
-  
+
   .sm-1 {width: 4.66666%;}
   .sm-2 {width: 13.33333%;}
   .sm-3 {width: 22%;}
