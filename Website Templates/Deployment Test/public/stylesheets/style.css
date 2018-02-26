@@ -6,6 +6,10 @@ body{
   box-sizing: border-box;
   width: 100%;
 }
+h1{
+  color: #393939;
+}
+/* NAVBAR STUFF */
 .navBar{
   background-color: #6a6a6a;
   overflow: hidden;
@@ -66,17 +70,18 @@ body{
 .navIconBar:nth-child(3){
   top: 64%;
 }
+/* CONTENT SYSTEM */
 .content{
-  position: fixed;
   font-size: 16px;
-  top: 50px;
+  margin-top: 50px;
   margin-left: 2.5%;
   margin-right: 2.5%;
-  overflow: scroll;
+}
+.bigScreen{
+  font-size: 14vw;
+  text-align: center;
 }
 .container{
-  max-width: 100%;
-  /* position: relative; */
 }
 .col{
     float: left;
