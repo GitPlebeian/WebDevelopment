@@ -6,19 +6,6 @@ body{
   box-sizing: border-box;
   width: 100%;
 }
-.content{
-  position: relative;
-  margin-top: 50px;
-  font-size: 16px;
-  max-width: 800px;
-  margin: auto;
-  top: 50px;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
-img{
-  object-fit: scale-down;
-}
 .navBar{
   background-color: #6a6a6a;
   overflow: hidden;
@@ -79,9 +66,17 @@ img{
 .navIconBar:nth-child(3){
   top: 64%;
 }
+.content{
+  position: fixed;
+  font-size: 16px;
+  top: 50px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  overflow: scroll;
+}
 .container{
-  /* max-width: 100%; */
-  position: relative;
+  max-width: 100%;
+  /* position: relative; */
 }
 .col{
     float: left;
