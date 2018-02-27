@@ -5,6 +5,7 @@ body{
   font-size: 20px;
   box-sizing: border-box;
   width: 100%;
+  color: #393939;
 }
 h1{
   color: #393939;
@@ -14,6 +15,30 @@ img{
   width: 100%;
   max-width: 600px;
   height: auto;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:visited{
+  color: black;
+}
+a:active{
+  color: black;
+}
+/* Image Thumbnail */
+.thumbNailLink{
+  text-align: center;
+  margin: 0;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #40bf8e;
+}
+.img img{
+  padding: 0;
+  background: none;
+  display: block;
 }
 /* NAVBAR STUFF */
 .navBar{
@@ -98,6 +123,7 @@ img{
 .col{
     float: left;
     margin-left: 4%;
+    margin-bottom: 4%;
 }
 @media (min-width: 993px) {
   .jumboFont{
@@ -116,18 +142,18 @@ img{
   .lg-11 {width: 91.33333%;}
   .lg-12 {width: 100%;}
 
-  .lg-1-nl {width: 4.66666%; margin: 0px;}
-  .lg-2-nl {width: 13.33333%; margin: 0px;}
-  .lg-3-nl {width: 22%; margin: 0px;}
-  .lg-4-nl {width: 30.66666%; margin: 0px;}
-  .lg-5-nl {width: 39.33333%; margin: 0px;}
-  .lg-6-nl {width: 48%; margin: 0px;}
-  .lg-7-nl {width: 56.66666%; margin: 0px;}
-  .lg-8-nl {width: 65.33333%; margin: 0px;}
-  .lg-9-nl {width: 74%; margin: 0px;}
-  .lg-10-nl {width: 82.66666%; margin: 0px;}
-  .lg-11-nl {width: 91.33333%; margin: 0px;}
-  .lg-12-nl {width: 100%;  margin: 0px;}
+  .lg-1-nl {width: 4.66666%; margin-left: 0px;}
+  .lg-2-nl {width: 13.33333%; margin-left: 0px;}
+  .lg-3-nl {width: 22%; margin-left: 0px;}
+  .lg-4-nl {width: 30.66666%; margin-left: 0px;}
+  .lg-5-nl {width: 39.33333%; margin-left: 0px;}
+  .lg-6-nl {width: 48%; margin-left: 0px;}
+  .lg-7-nl {width: 56.66666%; margin-left: 0px;}
+  .lg-8-nl {width: 65.33333%; margin-left: 0px;}
+  .lg-9-nl {width: 74%; margin-left: 0px;}
+  .lg-10-nl {width: 82.66666%; margin-left: 0px;}
+  .lg-11-nl {width: 91.33333%; margin-left: 0px;}
+  .lg-12-nl {width: 100%;  margin-left: 0px;}
 }
 
 @media (max-width: 992px) and (min-width: 769px) {
@@ -144,18 +170,18 @@ img{
   .md-11 {width: 91.33333%;}
   .md-12 {width: 100%;}
 
-  .md-1-nl {width: 4.66666%; margin: 0px;}
-  .md-2-nl {width: 13.33333%; margin: 0px;}
-  .md-3-nl {width: 22%; margin: 0px;}
-  .md-4-nl {width: 30.66666%; margin: 0px;}
-  .md-5-nl {width: 39.33333%; margin: 0px;}
-  .md-6-nl {width: 48%; margin: 0px;}
-  .md-7-nl {width: 56.66666%; margin: 0px;}
-  .md-8-nl {width: 65.33333%; margin: 0px;}
-  .md-9-nl {width: 74%; margin: 0px;}
-  .md-10-nl {width: 82.66666%; margin: 0px;}
-  .md-11-nl {width: 91.33333%; margin: 0px;}
-  .md-12-nl {width: 100%; margin: 0%;}
+  .md-1-nl {width: 4.66666%; margin-left: 0px;}
+  .md-2-nl {width: 13.33333%; margin-left: 0px;}
+  .md-3-nl {width: 22%; margin-left: 0px;}
+  .md-4-nl {width: 30.66666%; margin-left: 0px;}
+  .md-5-nl {width: 39.33333%; margin-left: 0px;}
+  .md-6-nl {width: 48%; margin-left: 0px;}
+  .md-7-nl {width: 56.66666%; margin-left: 0px;}
+  .md-8-nl {width: 65.33333%; margin-left: 0px;}
+  .md-9-nl {width: 74%; margin-left: 0px;}
+  .md-10-nl {width: 82.66666%; margin-left: 0px;}
+  .md-11-nl {width: 91.33333%; margin-left: 0px;}
+  .md-12-nl {width: 100%; margin-left: 0%;}
 }
 
 @media (max-width: 768px ) and (min-width: 577px) {
@@ -173,17 +199,17 @@ img{
   .sm-11 {width: 91.33333%;}
   .sm-12 {width: 100%;}
 
-  .sm-1-nl {width: 4.66666%; margin: 0px;}
-  .sm-2-nl {width: 13.33333%; margin: 0px;}
-  .sm-3-nl {width: 22%; margin: 0px;}
-  .sm-4-nl {width: 30.66666%; margin: 0px;}
-  .sm-5-nl {width: 39.33333%; margin: 0px;}
-  .sm-6-nl {width: 48%; margin: 0px;}
-  .sm-7-nl {width: 56.66666%; margin: 0px;}
-  .sm-8-nl {width: 65.33333%; margin: 0px;}
-  .sm-9-nl {width: 74%; margin: 0px;}
-  .sm-10-nl {width: 82.66666%; margin: 0px;}
-  .sm-11-nl {width: 91.33333%; margin: 0px;}
+  .sm-1-nl {width: 4.66666%; margin-left: 0px;}
+  .sm-2-nl {width: 13.33333%; margin-left: 0px;}
+  .sm-3-nl {width: 22%; margin-left: 0px;}
+  .sm-4-nl {width: 30.66666%; margin-left: 0px;}
+  .sm-5-nl {width: 39.33333%; margin-left: 0px;}
+  .sm-6-nl {width: 48%; margin-left: 0px;}
+  .sm-7-nl {width: 56.66666%; margin-left: 0px;}
+  .sm-8-nl {width: 65.33333%; margin-left: 0px;}
+  .sm-9-nl {width: 74%; margin-left: 0px;}
+  .sm-10-nl {width: 82.66666%; margin-left: 0px;}
+  .sm-11-nl {width: 91.33333%; margin-left: 0px;}
   .sm-12-nl {width: 100%; margin: 0px;}
 }
 @media (max-width: 576px) {
