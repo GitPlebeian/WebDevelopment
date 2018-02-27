@@ -15,6 +15,9 @@ app.get("/contact", function(req,res){
 app.get("/about", function(req,res){
 	res.render("about");
 });
+app.get("/singlePage", function(req,res){
+	res.render("websites/onePage.ejs");
+});
 
 app.listen(process.env.PORT || 5000, function(){
 	console.log("Starting Server");
