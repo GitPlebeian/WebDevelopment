@@ -2,7 +2,36 @@ body{
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  width: 85%;
+  margin: 0 auto;
+  color: #444;
 }
 h1{
-  /* font-style: normal; */
+  font-weight: 400;
+  color: #369da1;
+}
+hr{
+  color: #444;
+}
+#banner h1 {
+  margin: 0;
+  padding: 22px;
+}
+#banner{
+  text-align: center;
+  /* background-color: #40bf8e; */
+}
+#intro p {
+  font-size: 35px;
+  margin: 0px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 10%;
+}
+#intro{
+  /* background-image: url("/images/man.jpg"); */
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
 }
