@@ -12,9 +12,8 @@ app.get("/websites", function(req,res){
 app.get("/contact", function(req,res){
 	res.render("contact");
 });
-app.get("/about", function(req,res){
-	res.render("about");
-});
+
+
 app.get("/singlePage", function(req,res){
 	res.render("websites/onePage.ejs");
 });

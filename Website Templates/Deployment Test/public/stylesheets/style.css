@@ -20,20 +20,20 @@ a{
   text-decoration: none;
   color: black;
 }
-a:visited{
-  color: black;
-}
+
 a:active{
-  color: black;
+  color: white;
 }
 /* Image Thumbnail */
 .thumbNailLink{
+  color: white;
   text-align: center;
   margin: 0;
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #40bf8e;
+  margin-bottom: 3px;
 }
 .img img{
   padding: 0;
@@ -61,7 +61,7 @@ a:active{
 .navBar a:hover{
   color: #000;
   background-color: white;
-  /* box-shadow: 0px 0px 5px #444; */
+  /* box-shadow: 0px 0px 5px #444;*/
 }
 .navBar a.main{
   background-color: #40bf8e;
