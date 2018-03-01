@@ -25,13 +25,24 @@ function datastream("ducktape"{
 function(data){
 	name space the not("adfr");
 }
+rounter.post('/add, function req res')
 
-req.responsive.get.post("/0," "{bob, dildo dickining,{} cream :cheasus, :nut :back of crucnh}")
+req.responsive.get.post("/0," "{bob, did g,{} cream :cheasus, :nut :back of crucnh}")
 
-var names = {"joby:Dick,bob:marly"}
+var names = {"joby:Dick,bob:marly"};
+names.prototype.metts({"adfrr"}ASERF);
 
 names.post/({});
 module.exports = router;
+
+
+module.import(asdre(SDFRGF)){
+	var prototype = "baganing chip"
+	var worthOfChip = 31459;
+	var distanceToTravel = "aarsdg";
+	distanceToTravel = distanceToTravel + 30;
+}
+
 
 $document.ready(function(){
 	// your mom
