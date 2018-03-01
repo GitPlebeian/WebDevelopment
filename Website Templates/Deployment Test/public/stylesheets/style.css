@@ -42,7 +42,7 @@ a:active{
 }
 /* NAVBAR STUFF */
 .navBar{
-  background-color: #6a6a6a;
+  background-color: #bf5340;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -112,6 +112,7 @@ a:active{
 .jumboFont{
   font-size: 14vw;
   text-align: center;
+  color: #bf5340;
 }
 .textCenter{
   text-align: center;
@@ -216,6 +217,10 @@ a:active{
   div[class*="col"]{
     width: 100%;
     margin-left: 0px;
+  }
+  .content{
+    font-size: 22px;
+    margin-top: 50px;
   }
   .noMobile{
     display: none;

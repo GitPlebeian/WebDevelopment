@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+div{
+  display: block;
+}
+.content{
+  padding:30px;
+  background-color: #40bf8e;
+  font-size: 27px;
+  color: white;
+}
+.parallax{
+  letter-spacing: 5px;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.one{
+  background-image: url("/images/man2.jpeg");
+}
+.two{
+  background-image: url("/images/mountains.png");
+}
+.three{
+  background-image: url("/images/road.jpeg");
+}
+.four{
+  background-image: url("/images/man.jpeg");
+}
+.parallax p{
+  text-align: center;
+  margin: 0;
+  color:  #fff;
+  position: relative;
+  top: 200px;
+}
+@media (max-width: 576px){
+  .parallax{
+    height: 700px;
+  }
+}

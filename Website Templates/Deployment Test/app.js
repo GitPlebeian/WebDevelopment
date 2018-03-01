@@ -14,8 +14,11 @@ app.get("/contact", function(req,res){
 });
 
 
-app.get("/singlePage", function(req,res){
-	res.render("websites/onePage.ejs");
+app.get("/single-page", function(req,res){
+	res.render("websites/onePage");
+});
+app.get("/parlax-photography", function(req,res){
+	res.render("websites/paralaxPhotography");
 });
 
 app.listen(process.env.PORT || 5000, function(){
