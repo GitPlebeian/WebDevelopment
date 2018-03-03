@@ -22,16 +22,16 @@ div{
   background-attachment: fixed;
 }
 .one{
-  background-image: url("/images/man2.jpeg");
+  background-image: url("/images/man2.jpg");
 }
 .two{
-  background-image: url("/images/mountains.png");
+  background-image: url("/images/mountains.jpg");
 }
 .three{
-  background-image: url("/images/road.jpeg");
+  background-image: url("/images/road.jpg");
 }
 .four{
-  background-image: url("/images/man.jpeg");
+  background-image: url("/images/man.jpg");
 }
 .parallax p{
   text-align: center;
