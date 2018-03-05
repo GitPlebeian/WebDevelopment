@@ -21,18 +21,18 @@ h1,h2,h3,h4,h5,h6{
 }
 .introMain{
   color: #00ccce;
-  font-size: 34px;
+  font-size: 60px;
 }
 .introP{
-  font-size: 27px;
+  font-size: 40px;
   color: #f6745e;
 }
 /* End of intro stuff */'
 .content{
-
 }
 .leftFull{
-  height: 500px;
+  height: 5000px;
+  background-color: red;
 }
 @media (min-width: 993px) {
 }
