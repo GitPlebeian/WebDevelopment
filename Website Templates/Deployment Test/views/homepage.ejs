@@ -1,6 +1,6 @@
 <% include partials/header %>
-  <div class="navBar" id="navBar">
-    <a href="/" class="main">Home</a>
+  <div class="navBar primary-background white" id="navBar">
+    <a href="/" class="main white secondary-background">Home</a>
     <a href="websites">Website Themes</a>
     <a href="contact">Contact</a>
     <div class="navIconButton" onclick="navIconClick()">
@@ -10,18 +10,33 @@
     </div>
   </div>
 
-  <div class="content" onclick="focusContent()">
+  <div class="content primary-background" onclick="focusContent()">
+    <div class="img1 white-background">
+        <h1 class="jumboFont secondary textCenter">Jax Tubbs</h1>
+    </div>
     <div class="container">
-      <div class="col lg-12-nl md-12-nl sm-12-nl">
-        <h1 class="jumboFont">Jax Tubbs</h1>
-        <p class="textCenter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec est non tortor semper mollis. Mauris ac consequat enim. Pellentesque aliquet risus sit amet ultrices congue. Nullam molestie, erat et imperdiet faucibus, neque
-          augue maximus felis, et iaculis ligula arcu ut diam. Etiam lacinia nibh metus, eu aliquam nunc euismod blandit.s</p>
-        <p class="textCenter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec est non tortor semper mollis. Mauris ac consequat enim. Pellentesque aliquet risus sit amet ultrices congue. Nullam molestie, erat et imperdiet faucibus, neque
-          augue maximus felis, et iaculis ligula arcu ut diam. Etiam lacinia nibh metus, eu aliquam nunc euismod blandit. Vivamus finibus est quis nisl viverra, quis egestas lacus molestie. Aliquam molestie pellentesque velit finibus imperdiet. Morbi at erat
-          eget turpis accumsan dictum eu vel sapien. Aenean luctus turpis quis mauris sollicitudin aliquet. Quisque fringilla convallis nisl, at pulvinar urna convallis eget. Suspendisse potenti. Quisque non ultricies ipsum, at vehicula sem. Sed consequat
-          cursus quam, sed placerat libero fermentum eget. Quisque bibendum feugiat ligula. Vivamus dignissim placerat nulla ut pretium. Nunc sed libero purus. Ut commodo risus sit amet felis maximus dignissim. Aliquam at erat diam. Suspendisse eget magna
-          tortor. Cras a ex mi. Praesent laoreet pulvinar facilisis. Nam blandit lorem nec consequat ullamcorper.</p>
+      <div class="col lg-12-nl md-12-nl sm-12-nl white max-lg">
+          <h1>Me</h1>
+          <p>I am from Sunny San Diego California and I am a web designer/developer. I try to make things as easy as possible for people by taking care of all the complicated hosting and backend intricacies as well as making a fantastic looking website.</p>
+          <hr class="secondary">
+          <h1>Goals</h1>
+          <ol>
+            <li>Make clean simple websites designed to impress</li>
+            <li>Provide the highest quality work possible</li>
+            <li>Be efficient</li>
+            <li>Be productive</li>
+          </ol>
+          <hr class="secondary">
+          <h1>Accomplished Goals</h1>
+          <ul>
+            <li>Post my portfolio for the world to see</li>
+            <li>Design a portfolio</li>
+            <li>Develop a server</li>
+            <li>Design an efficient responsive grid framework designed for mobile</li>
+            <li>Create my first website</li>
+          </ul>
       </div>
     </div>
+  </div>
   </div>
   <% include partials/footer %>

@@ -5,44 +5,43 @@ body{
   font-size: 20px;
   box-sizing: border-box;
   width: 100%;
-  color: #393939;
+}
+hr{
+  border-style: solid;
+  border-width: 2px;
 }
 h1{
-  color: #393939;
   font-weight: normal;
-}
-img{
-  width: 100%;
-  /* max-width: 600px; */
-  height: auto;
 }
 a{
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
-
+div{
+  overflow: auto;
+  display: block;
+}
 a:active{
-  color: white;
+}
+#jumbo1{
+  font-size: 5vw;
 }
 /* Image Thumbnail */
 .thumbNailLink{
-  color: white;
   text-align: center;
   margin: 0;
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #40bf8e;
-  margin-bottom: 3px;
 }
-.img img{
-  padding: 0;
-  background: none;
-  display: block;
+.thumbNailDiv{
+  overflow: visible;
+}
+.thumbNail img{
+  width: 100%;
 }
 /* NAVBAR STUFF */
 .navBar{
-  background-color: #bf5340;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -53,7 +52,6 @@ a:active{
   text-decoration: none;
   display: block;
   float: left;
-  color: #fff;
   text-align: center;
   padding: 14px 16px;
   height: 100%;
@@ -62,10 +60,6 @@ a:active{
   color: #000;
   background-color: white;
   /* box-shadow: 0px 0px 5px #444;*/
-}
-.navBar a.main{
-  background-color: #40bf8e;
-  color: black;
 }
 .navBar a.main:hover{
   background-color: #fff;
@@ -102,20 +96,40 @@ a:active{
   top: 64%;
 }
 /* CONTENT SYSTEM */
+.primary-background{
+  background-color: #bf5340;
+}
+.secondary-background{
+  background-color: #40bf8e;
+}
+.white-background{
+  background-color: white;
+}
+.primary{
+  color: #bf5340;
+}
+.secondary{
+  color: #40bf8e;
+}
+.black{
+  color: black;
+}
+.white{
+  color: white;
+}
 .content{
-  font-size: 27px;
-  margin-top: 50px;
+  font-size: 25px;
 }
 .onMobile{
   display: none;
 }
 .jumboFont{
-  font-size: 14vw;
-  text-align: center;
-  color: #bf5340;
+  font-size: 16vw;
+  margin-left: 20px;
 }
 .textCenter{
   text-align: center;
+  margin-left: 0px;
 }
 .container{
   margin-left: 2.5%;
@@ -126,9 +140,9 @@ a:active{
     margin-left: 4%;
     margin-bottom: 4%;
 }
-@media (min-width: 993px) {
-  .jumboFont{
-    font-size: 139px;
+@media (min-width: 993px){
+  .max-lg{
+    max-width: 950px;
   }
   .lg-1 {width: 4.66666%;}
   .lg-2 {width: 13.33333%;}

@@ -1,0 +1,33 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+div{
+  display: block;
+  overflow: auto;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+.introImage{
+  background-image: url("city.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.intro{
+  margin-left: 8%;
+  margin-top: 100px;
+}
+.introMain{
+  color: #00ccce;
+  font-size: 60px;
+}
+.introP{
+  font-size: 30px;
+  color: #f6745e;
+}
+@media (min-width: 993px) {
+}

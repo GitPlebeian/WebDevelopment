@@ -13,7 +13,6 @@ app.get("/contact", function(req,res){
 	res.render("contact");
 });
 
-
 app.get("/single-page", function(req,res){
 	res.render("websites/onePage");
 });
