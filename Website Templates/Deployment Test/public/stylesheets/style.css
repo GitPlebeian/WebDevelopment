@@ -42,8 +42,8 @@ h1,h2,h3,h4,h5,h6{
   margin:50px auto;
   width: 80%;
   color: white;
-  background-color: #f6745e;
-  border: 20px solid #f6745e;
+  background-color: #fe1a1a;
+  border: 20px solid #fe1a1a;
   border-radius: 4px;
   font-size: 35px;
   position: relative;
@@ -63,8 +63,8 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 4px;
 }
 .red{
-  background-color: #f6745e;
-  border-color: #f6745e;
+  background-color: #fe1a1a;
+  border-color: #fe1a1a;
 }
 .content{
   /* overflow: hidden; */
