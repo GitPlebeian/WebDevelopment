@@ -1,7 +1,0 @@
-{
-  "name": "seedrandom",
-  "version": "",
-  "dependencies": {
-    "seedrandom": "^2.4.3"
-  }
-}
