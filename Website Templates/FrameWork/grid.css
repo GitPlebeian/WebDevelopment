@@ -1,0 +1,27 @@
+@media (max-width: 576px) {
+  div[class*="col"]{
+    width: 100%;
+    margin-left: 0px;
+  }
+  .navBar a:not(:first-child) {
+    display: none;
+  }
+  .navBar .navIcon {
+    float: right;
+    display: inline-block;
+  }
+
+  .navBar.responsive {
+    position: fixed;
+  }
+  .navBar.responsive .navIcon{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
