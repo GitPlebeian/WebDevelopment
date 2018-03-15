@@ -61,7 +61,6 @@ h1,h2,h3,h4,h5,h6{
 .navBar a:hover{
   color: #000;
   background-color: #fff;
-  box-shadow: 0px 0px 3px #444;
 }
 .navBar a.main{
   background-color: #f9585a;;
