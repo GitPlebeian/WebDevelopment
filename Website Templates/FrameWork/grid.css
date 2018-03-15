@@ -3,6 +3,13 @@
     width: 100%;
     margin-left: 0px;
   }
+  .navBarSlideIn.navBarSlideInActive{
+    top: 52px;
+    box-shadow:0px 2px 5px rgba(0,0,0,0.2);
+  }
+  .navBar.responsive{
+    box-shadow: none;
+  }
   .navBar a:not(.main) {
     display: none;
   }
@@ -15,7 +22,7 @@
     right: 0;
     top: 0;
   }
-  .navBar.responsive a{
+  .navBar.responsive a.main{
     float: none;
     display: block;
     text-align: left;
