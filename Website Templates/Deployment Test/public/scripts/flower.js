@@ -1,10 +1,3 @@
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-});
-
-var viewportHeight = $('.parallax-window').outerHeight();
-$('.parallax-window').css({ height: viewportHeight });
-
 function navBar(navBar) {
     var x = document.getElementById("navBar");
     var y = document.getElementById("navBarSlideInid");
