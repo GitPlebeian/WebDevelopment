@@ -14,6 +14,9 @@ app.get("/websites", function(req,res){
 app.get("/websites/flower", function(req,res){
 	res.render("websites/flower.ejs");
 });
+app.get("/websites/glass", function(req,res){
+	res.render("websites/glass.ejs");
+});
 
 app.listen(5000, function(){
 	console.log("Starting Server");
