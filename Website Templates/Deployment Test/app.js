@@ -17,6 +17,9 @@ app.get("/websites/flower", function(req,res){
 app.get("/websites/glass", function(req,res){
 	res.render("websites/glass.ejs");
 });
+app.get("/websites/photography", function(req,res){
+	res.render("websites/photography.ejs");
+});
 
 app.listen(5000, function(){
 	console.log("Starting Server");
