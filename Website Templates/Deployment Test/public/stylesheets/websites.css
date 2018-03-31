@@ -70,11 +70,10 @@ a{
 }
 .navBarSlideIn{
   z-index: 9;
-  transition: 0.25s;
   font-size: 20px;
   overflow: hidden;
   position: fixed;
-  top: -52px;
+  top: -68px;
   width: 100%;
   background-color: #16a5f9;
 }
@@ -213,6 +212,9 @@ a{
   .text{
     font-size: 21px;
     padding: 7px;
+  }
+  .navBarSlideIn{
+    display: none;
   }
   .navBarSlideIn.navBarSlideInActive{
     top: 52px;

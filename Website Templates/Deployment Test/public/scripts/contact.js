@@ -1,22 +1,32 @@
-$('form').submit( function(event) {
-    var form = this;
-    event.preventDefault();
-    $("#send").attr("value","Message has been sent!")
+$('.btn').click( function(event) {
+  console.log("asdfffdf");
+    $(".btn p").html("Message has been sent!")
+    $("#redirect").html("Redirecting to home")
     setTimeout( function () {
-        form.submit();
-    }, 2500);
+        $("form").submit();
+    }, 2000);
 });
 
 function navBar(navBar) {
     var x = document.getElementById("navBar");
-    var y = document.getElementById("navBarSlideInid");
+    var y = $('#navBarSlideInid');
     if (x.className === "navBar") {
         x.className += " responsive";
+        y.css('display', 'block')
+        y.animate({
+          top: '52px'
+        }, 200)
     } else {
         x.className = "navBar";
+        y.animate({
+          top: '-68px'
+        }, 200)
+        setTimeout( function () {
+            y.css('display', 'none')
+        }, 200);
     }
     navBar.classList.toggle("navIconBarActive");
-    y.classList.toggle("navBarSlideInActive");
+    y.toggleClass("navBarSlideInActive");
 }
 function focusContent() {
   var x = document.getElementById("navBar");
