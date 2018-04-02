@@ -45,6 +45,10 @@ app.get("/websites/glass", function(req,res){
 app.get("/websites/compute", function(req,res){
 	res.render("websites/compute");
 });
+app.get("/websites/coffeeShop", function(req,res){
+	res.render("websites/coffeeShop");
+});
+
 
 
 

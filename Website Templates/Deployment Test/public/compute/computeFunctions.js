@@ -32,6 +32,8 @@ function fadeIn(element) {
   }, 500)
 }
 
+// INTRO END
+
 function systemCompute(mod) {
   if (true) {
     money += manualSystemComputeRate;
@@ -93,7 +95,6 @@ function updateVariablesTenthSecond() {
   if(upgradeModuleActive == true){
     $('#research').css('display','block')
     $('#upgradeModuleDiv').css('display','none')
-    console.log(upgradeModuleActive + 'True');
   } else {
     $('#research').css('display','none')
     $('#purchaseUpgradeModule').html('Research MOD')
@@ -117,6 +118,13 @@ function updateVariablesTenthSecond() {
 
   research = Math.round(research * 100) / 100
   $('#researchResource').html('Research: ' + research)
+
+  if(computeInstanceModActiveResearch) {
+    $('#purchaseComputationInstanceDiv').css('display','block')
+  } else {
+    $('#purchaseComputationInstanceDiv').css('display','none')
+  }
+
 }
 
 function updateVariablesHalfSecond() {
@@ -138,5 +146,7 @@ function saveVariables() {
   localStorage.setItem('computationRateUpgrade',computationRateUpgrade)
   localStorage.setItem('computationRateUpgradePrice',computationRateUpgradePrice)
   localStorage.setItem('upgradeModuleActive',upgradeModuleActive)
+  localStorage.setItem('research',research)
+  localStorage.setItem('computeInstanceModActiveResearch',computeInstanceModActiveResearch)
 
 }
