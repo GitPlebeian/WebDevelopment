@@ -13,11 +13,12 @@
       <a href="/" class="main">éblet</a>
       <a href="#" class="navBarRight cart">Cart</a>
       <a href="/login" class="navBarRight" id="loginLink">Login</a>
+      <a href="/signup" class="navBarRight signupLink">Signup</a>
       <a href="/logout" class="navBarRight" id="logout">Logout</a>
       <a href="#" class="navBarRight" id="usernameDisplay" class="navBarRight"></a>
       <input id="itemSearch" type="text" name="" value="" placeholder="Search">
-      <a href="/items"></a>
-      <div class="navIcon" onclick="navBar(this)">
+      <a href="/items" class="addItemLink">Add Item</a>
+      <div class="navIcon" id="navIcon" onclick="navBar(this)">
         <div class="navIconBar"></div>
         <div class="navIconBar"></div>
         <div class="navIconBar"></div>
@@ -27,8 +28,10 @@
       <a href="/login" id="loginLink2">Login</a>
       <a href="/logout" id="logout2">Logout</a>
       <a href="#" class="cart">Cart</a>
+      <a href="/items" class="addItemLink">Add Item</a>
+      <a href="/signup" class="signupLink">Signup</a>
     </div>
-    <div class="content">
+    <div class="content" onclick="focusContent()">
       <div class="allItems">
         <div class="item" id="dog" itemNumber='1'>
           <p class="itemName">Las Vegas</p>
