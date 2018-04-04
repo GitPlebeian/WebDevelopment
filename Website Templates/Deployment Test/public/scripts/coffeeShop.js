@@ -18,6 +18,18 @@
     $('head').append('<style>.introText p:before{width:100%;}</style>');
   }, 200)
 
+  setTimeout(function() {
+    $('.introScrollDownAnimation').animate({
+      opacity: '1',
+      bottom: '0px'
+    }, 800)
+  }, 750)
+
+  $(window).scroll(function() {
+    $('.introScrollDownAnimation').animate({
+      opacity: '0.0'
+    }, 200)
+  })
 
   $('.navbarLinkMod').mouseenter(function() {
     var p = $('.navBarLinkContainer:nth-child(' + this.getAttribute("child") + ') p')
