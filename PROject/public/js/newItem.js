@@ -16,3 +16,35 @@ function readURL(e) {
     }
 }
 $("#fileStuff").change(readURL);
+
+// $(document).ready(
+//   function()
+//   {
+//     $('form').submit(
+//       function(event)
+//       {
+//         if($(#fileStuff).val() == '') {
+//           alert('No Image');
+//           return false;
+//         }
+//         $.ajax({
+//               url: "/getItems",
+//               type: "GET",
+//               data: {},
+//               success: function(data){
+//                     for(i=0;i<data.length,i++)
+//                     {
+//                       if(data[i].name == $('#name').val()){
+//                         alert('Cant have two same names');
+//                         return false;
+//                       }
+//
+//                     }
+//                       }
+//                     },
+//                     dataType: "json"
+//                   });
+//
+//         $.post('/upload',{},successChange);
+//       });
+//   });

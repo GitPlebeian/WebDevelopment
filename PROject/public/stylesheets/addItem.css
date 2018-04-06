@@ -87,6 +87,7 @@ textarea {
     font-family: 'Roboto', sans-serif;
     padding: 7px;
     height: 120px;
+    overflow-wrap: break-word;
 }
 #submit{
   display: none;

@@ -56,7 +56,7 @@ databaseItem.prototype.addObjectAtIndex = function(obj,index) {
 
 databaseItem.prototype.addObject = function(obj) {
 	for (let i=0;i<this.infoList.length;i++) {
-		if (this.infoList[i] && obj.username == this.infoList[i].username)
+		if (this.infoList[i] && obj.name == this.infoList[i].name)
 			return (null);
 	}
 	this.infoList.push(obj);

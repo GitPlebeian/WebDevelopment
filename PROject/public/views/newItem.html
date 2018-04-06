@@ -18,13 +18,13 @@
       action="fileupload"
       method="post"
       enctype="multipart/form-data">
-      <input type="text" id="name" placeholder="Enter a name" name='name'>
+      <input type="text" id="name" maxlength="20" placeholder="Enter a name" name='name'>
       <br>
-      <input type="number" name="price" id='price' placeholder="Enter a price" min='0'>
+      <input type="number" name="price" max="1000000000" maxlength="7" id='price' placeholder="Enter a price" min='0'>
       <br>
       <input id="fileStuff" type="file" name="filetoupload">
       <label for="fileStuff" id="fileSuffLabel">Choose an image</label>
-      <textarea id="description" name="description" placeholder="Enter Description"></textarea>
+      <textarea id="description" name="description" placeholder="Enter Description" maxlength="2000"></textarea>
       <img src="" id="img" alt="img">
       <input type="submit" id="submit">
       <label for="submit" id="submitLabel"> Submit</label>

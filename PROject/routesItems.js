@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 var formidable = require('formidable');
 var fs = require('fs');
-
+var itemNumber = 10;
 var data = require('./databaseItem')
 
 let db = new data();
@@ -15,6 +15,9 @@ router.post('/upload', function(req, res){
 console.log("upload");
 		res.json({});
 });
+router.get('/getItems',function(req,res){
+    res.json(db.getAllObjects());
+});
 
 router.post('/fileupload', function(req, res){
 
@@ -22,19 +25,18 @@ router.post('/fileupload', function(req, res){
     form.parse(req, function (err, fields, files) {
     var oldpath = files.filetoupload.path;
     var newpath = __dirname + '/public/images/' + files.filetoupload.name;
+		var picturei =  '/public/images/' + files.filetoupload.name;
 
-    console.log(fields.name + ' ' + fields.price + ' ' + fields.description + ' ' + newpath);
+		// console.log('in post ' + fields.name + ' ' + fields.price + ' ' + fields.description + ' ' + picturei);
 
-    let obj = {name:fields.name,price:fields.price,picture:newpath,description:fields.description};
-    db.addObject(obj);
-
+     db.addObject({name:fields.name,price:fields.price,picture:picturei,description:fields.description,number:itemNumber});
+		 itemNumber++;
     fs.rename(oldpath, newpath, function (err) {
     if (err) throw err;
-
-		console.log("fileupload " + files.filetoupload.name);
         res.redirect("/");
       });
     });
 });
+
 
 module.exports = router;
