@@ -1,5 +1,16 @@
   var navbarInterval = 0;
 
+  var viewportHeight = $('.intro').outerHeight();
+  $('.intro, .paralaxInfo').css({ height: viewportHeight });
+
+  if($(window).width() > 577){
+    setTimeout(function() {
+      $('.introScrollDownAnimation').animate({
+        opacity: '1',
+        bottom: '0px'
+      }, 800)
+    }, 750)
+  }
   var child = 1
   for(var i = 1;i < 8;i++) {
       setTimeout(function() {
@@ -17,13 +28,6 @@
   setTimeout(function() {
     $('head').append('<style>.introText p:before{width:100%;}</style>');
   }, 200)
-
-  setTimeout(function() {
-    $('.introScrollDownAnimation').animate({
-      opacity: '1',
-      bottom: '0px'
-    }, 800)
-  }, 750)
 
   $(window).scroll(function() {
     $('.introScrollDownAnimation').animate({
@@ -77,3 +81,5 @@
          left: '74px'
     },50)
   })
+
+  // Mobile NavBar

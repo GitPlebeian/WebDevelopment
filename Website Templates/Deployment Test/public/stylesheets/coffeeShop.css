@@ -179,13 +179,11 @@ h1,h2,h3,h4,h5,h6{
 }
 .realContentBackground{
   background-image: url("/images/coffee3.jpg");
-  height: 100vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  overflow: hidden;
 }
 .textBox{
   background-color: white;
@@ -247,6 +245,14 @@ h1,h2,h3,h4,h5,h6{
 }
 .lastNoMarginBot{
   margin-bottom: 0;
+}
+.mobileNavBar{
+  display: none;
+  position: fixed;
+}
+.mobileNavBarToggle{
+  display: none;
+  position: fixed;
 }
 .container{
   margin-left: 2.5%;
@@ -328,6 +334,9 @@ h1,h2,h3,h4,h5,h6{
   .content{
     margin: 0px;
   }
+  .textBox{
+    font-size: 18px;
+  }
   .sm-1 {width: 4.66666%;}
   .sm-2 {width: 13.33333%;}
   .sm-3 {width: 22%;}
@@ -359,6 +368,9 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
     margin-left: 0px;
   }
+  .intro, .paralaxInfo, .realContentBackground{
+    background-attachment: local;
+  }
   .peopleQuotes{
     margin-top: 0;
   }
@@ -371,5 +383,39 @@ h1,h2,h3,h4,h5,h6{
   }
   .content{
     margin: 0px;
+  }
+  .textBox{
+    font-size: 16px;
+  }
+  .mobileNavBarToggle{
+    display: block;
+    width: 100%;
+    height: 44px;
+    background-color: white;
+    bottom: 0px;
+    position: fixed;
+    z-index: 100;
+    box-sizing: border-box;
+  }
+  .mobileNavBarToggleDiv{
+    box-sizing: border-box;
+    float: right;
+    padding: 12px 15px;
+    padding-top: 13px;
+    cursor: pointer;
+  }
+  .mobileNavBarTogglePart{
+    height: 1px;
+    background-color: #A46637;
+    width: 25px;
+  }
+  .mobileNavBarTogglePart:nth-child(1){
+    margin-bottom: 8px;
+  }
+  .mobileNavBarTogglePart:nth-child(2){
+    margin-bottom: 8px;
+  }
+  .mobileNavBarTogglePart:nth-child(3){
+
   }
 }
