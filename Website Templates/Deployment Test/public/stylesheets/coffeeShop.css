@@ -6,6 +6,8 @@ body{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: auto;
+  overflow-x: hidden;
 }
 h1,h2,h3,h4,h5,h6{
   font-weight: normal;
@@ -85,6 +87,7 @@ h1,h2,h3,h4,h5,h6{
 
 .content{
   margin-left: 60px;
+  position: relative;
 }
 .intro{
   height: 100vh;
@@ -249,6 +252,10 @@ h1,h2,h3,h4,h5,h6{
 .mobileNavBar{
   display: none;
   position: fixed;
+  width: 40%;
+  height: 100vh;
+  left: -40%;
+  background-color: #a46637;
 }
 .mobileNavBarToggle{
   display: none;
@@ -416,6 +423,20 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 8px;
   }
   .mobileNavBarTogglePart:nth-child(3){
-
+  }
+  .mobileNavBar.active{
+    z-index: 99;
+  }
+  .mobileNavBar a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    display: block;
+    background-color: #a46637;
+    padding: 12px 16px;
+    text-align: center;
+  }
+  .mobileNavBar a:hover{
+    border-bottom: 2px white solid;
   }
 }

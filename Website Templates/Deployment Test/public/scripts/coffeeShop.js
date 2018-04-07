@@ -83,3 +83,51 @@
   })
 
   // Mobile NavBar
+mobileActive = false;
+$('.mobileNavBarToggleDiv').click(function() {
+  mobileActive = !mobileActive
+  navbar = $('.mobileNavBar')
+  content = $('.content')
+  navbar.toggleClass('active')
+
+  if(mobileActive){
+    navbar.css('display','block')
+    content.animate({
+      left: '40%'
+    }, 250)
+
+    navbar.animate({
+      left: '0'
+    }, 220)
+  } else {
+    content.animate({
+      left: '0'
+    }, 250)
+    navbar.animate({
+      left: '-40%'
+    }, 250)
+    setTimeout(function() {
+      navbar.css('display','none')
+    },250)
+  }
+
+})
+
+$('.content').click(function() {
+  if(mobileActive){
+    mobileActive = !mobileActive
+    navbar = $('.mobileNavBar')
+    content = $('.content')
+    navbar.toggleClass('active')
+    
+    content.animate({
+      left: '0'
+    }, 250)
+    navbar.animate({
+      left: '-40%'
+    }, 250)
+    setTimeout(function() {
+      navbar.css('display','none')
+    },250)
+  }
+})
