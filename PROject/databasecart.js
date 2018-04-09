@@ -13,6 +13,7 @@ databasecart.prototype.getAllObjects = function() {
 	return(this.infoList);
 	}
 	databasecart.prototype.getAllObjectsName = function(username) {
+		console.log("inside func");
 		var temp = []
 			for (let i=0;i<this.infoList.length;i++) {
 				if(this.infoList[i].username == username){

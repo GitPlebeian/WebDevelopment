@@ -88,6 +88,12 @@ router.get("/userInfo",function(req,res){
 		return res.json({username:req.session_state.username, loginState:req.session_state.login});
 		}
 });
+router.get("/getUsernames",function(req,res){
+	for(i=0;i<db.infoList.length;i++){
+		console.log(db.getUsernames());
+		return res.json(db.getUsernames());
+	}
+});
 
 router.get("/logout",function(req,res){
 	req.session_state.reset();
@@ -150,6 +156,7 @@ router.delete('/deleteLogin', function(req, res){
 		res.json(null);
 	} else{
 		let tempobj = {username:req.body.username};
+		console.log("deleting");
 		return res.json(db.deleteObjectWithID(tempobj));
 	}
 
@@ -164,7 +171,7 @@ let db3 = new dataBase3();
 
 
 router.get('/cart2', function (req, res) {
-
+	console.log("get");
 	if(req.session_state.login)
 	{
 		console.log("sessions of get");
@@ -197,10 +204,26 @@ else {
 console.log("fail posts");
 		return 	 res.json();
 });
+router.put('/updatePassword', function(req, res){
+	if (req.body.username == "" || req.body.password == "" || req.body.newPass == "") {
+		return res.json(null);
+	}
+	let obj = {username: req.body.username,password: req.body.password,newPass: req.body.newPass};
+	if(db.changeObject(obj)){
+		console.log("returned true");
+		if(req.session_state.username == req.body.username && req.session_state.password == req.body.password){
+			req.session_state.reset();
+			return res.json(obj);
+		}
+		return res.json(obj);
+	}
+	return res.json(null);
+});
 router.delete('/cart', function (req, res) {
 
 
 
 			res.json(db3.deleteObjectWithID(req.body.index));
 });
+
 module.exports = router;

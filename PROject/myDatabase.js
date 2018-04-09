@@ -75,6 +75,20 @@ myDatabase.prototype.addObjectAtIndex = function(obj,index) {
 	return (obj);
 }
 
+myDatabase.prototype.changeObject = function(obj) {
+	console.log("obj" + JSON.stringify(obj));
+	console.log("infoList" + JSON.stringify(this.infoList[0]));
+	for(var i=0;i<this.infoList.length;i++){
+		if(obj.username == this.infoList[i].username && obj.password == this.infoList[i].password){
+			console.log("congrats");
+			this.infoList[i].password = obj.newPass;
+			return (true);
+		}
+	}
+	console.log("feels bad man");
+	return (null);
+}
+
 
 myDatabase.prototype.addObject = function(obj) {
 	for (let i=0;i<this.infoList.length;i++) {
@@ -125,9 +139,11 @@ myDatabase.prototype.deleteObjectAtIndex = function(index) {
 //add or modify.  Complete deleteObjectWithID function.
 myDatabase.prototype.deleteObjectWithID = function(ident) {
 	for(var i=0;i<this.infoList.length;i++){
-	if(this.infoList[i].ident == ident){
-		this.infoList[i].ident = undefined;
-		this.infoList[i].name = undefined;
+	if(this.infoList[i].username == ident.username){
+		this.infoList.splice(i, 1);
+		//this.infoList[i] = undefined;
+		console.log(ident);
+		console.log("hello there");
 		return(ident);
 	}
 }
