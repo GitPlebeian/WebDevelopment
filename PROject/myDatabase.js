@@ -21,6 +21,21 @@ myDatabase.prototype.getAllNames = function() {
 	}
 	return(names);
 }
+myDatabase.prototype.getUsernames = function() {
+	let names = [];
+	for (let i=0;i<this.infoList.length;i++) {
+		if (this.infoList[i]) {
+			names.push({username: this.infoList[i].username});
+		}
+	}
+	for(let i=0;i<names.length;i++){
+		if(names[i].username != undefined){
+			return(names);
+		}
+	}
+
+
+}
 
 myDatabase.prototype.getObjectAtIndex = function(index) {
 	if (index < 0 || index >= this.infoList.length)

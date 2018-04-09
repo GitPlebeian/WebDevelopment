@@ -59,6 +59,7 @@ $.ajax({
                   "<img class=\"itemImage\" src=\"" + currObj.picture + "\" alt=\"\">" +
                   "<p class=\"price\">$" + currObj.price + "</p>" +
                   "<p class=\"description\">" + currObj.description + "</p>" +
+                  "<input type=\"button\" class=\"cartButton\" value=\"Add to Cart\" itemNumber=\'" + currObj.number +"\'>" +
                   "</div>");
                 }
                 else {
