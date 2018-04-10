@@ -13,15 +13,19 @@ function navBar(){
 
 
 function accordianToggle(thing) {
+  var changeToDeactive = false;
   things = thing.nextElementSibling
   obj = $(thing.nextElementSibling);
+  if($(thing).hasClass('active')){
+    changeToDeactive = true
+  }
   $('.accordianToggle').removeClass('active')
-  $(thing).toggleClass('active')
+
   allAcorrdions = $('.accordianContent')
   allAcorrdions.each(function(){
     $(this).css('max-height','0')
   })
-  if($(thing).hasClass('active')){
+  if(changeToDeactive){
     obj.css('max-height','0')
     setTimeout(function(){
       obj.css('border-width','0px')
