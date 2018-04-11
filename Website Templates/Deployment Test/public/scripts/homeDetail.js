@@ -21,6 +21,9 @@ function accordianToggle(thing) {
   }
   $('.accordianToggle').removeClass('active')
 
+  if(!changeToDeactive){
+    $(thing).toggleClass('active')
+  }
   allAcorrdions = $('.accordianContent')
   allAcorrdions.each(function(){
     $(this).css('max-height','0')
@@ -30,7 +33,6 @@ function accordianToggle(thing) {
     setTimeout(function(){
       obj.css('border-width','0px')
     },205)
-    console.log('meme');
   } else {
     obj.css('border-width','1px')
     things.style.maxHeight = things.scrollHeight + 'px'

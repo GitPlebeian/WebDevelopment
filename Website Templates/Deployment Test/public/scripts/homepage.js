@@ -5,36 +5,15 @@ $(window).on('beforeunload', function() {
 var viewportHeight = $('.parallax-window').outerHeight();
 $('.parallax-window').css({ height: viewportHeight });
 
-function navBar(navBar) {
-    var x = document.getElementById("navBar");
-    var y = $('#navBarSlideInid');
-    if (x.className === "navBar") {
-        x.className += " responsive";
-        y.css('display', 'block')
-        y.animate({
-          top: '52px'
-        }, 200)
-    } else {
-        x.className = "navBar";
-        y.animate({
-          top: '-68px'
-        }, 200)
-        setTimeout( function () {
-            y.css('display', 'none')
-        }, 200);
-    }
-    navBar.classList.toggle("navIconBarActive");
-    y.toggleClass("navBarSlideInActive");
-}
-function focusContent() {
-  var x = document.getElementById("navBar");
-  var y = document.getElementById("navBarSlideInid");
-  var z = document.getElementById("navIcon");
-  if (x.className === "navBar") {
+function navBar(){
+  navBarToggle = $('.navBarToggle')
+  obj = document.getElementById("navBarLinks")
 
+  $(obj).css('color',"red")
+  navBarToggle.toggleClass("active")
+  if(obj.style.maxHeight){
+    obj.style.maxHeight = null
   } else {
-      x.className = "navBar";
-      z.classList.toggle("navIconBarActive");
-      y.classList.toggle("navBarSlideInActive");
+    obj.style.maxHeight = obj.scrollHeight + 'px'
   }
 }
