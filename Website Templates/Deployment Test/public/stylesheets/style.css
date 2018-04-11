@@ -4,6 +4,25 @@ body{
   padding: 0px;
   box-sizing: border-box;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f9585a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e9484a;
+}
 div{
   display: block;
   overflow: hidden;
@@ -13,6 +32,10 @@ h1,h2,h3,h4,h5,h6{
 }
 ul{
   padding-left: 30px;
+}
+.footer{
+  text-align: center;
+  font-size: 17px;
 }
 .link{
   text-align: center;
@@ -71,7 +94,7 @@ ul{
 }
 .content{
   padding-top: 2.5%;
-  background-color: #666;
+  background-color: #e2e2e2;
 }
 .container{
   margin-left: 2.5%;
@@ -89,7 +112,7 @@ ul{
   font-size: 20px;
   padding: 15px 10%;
   box-sizing: border-box;
-  box-shadow: 0 0 4px #999;
+  box-shadow: 0 0 4px #666;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -254,9 +277,6 @@ ul{
     float: left;
     width: 100%;
     transition: 0.25s;
-  }
-  .navBarLinks  a:last-child{
-    padding-bottom: 7px;
   }
   .navBar a{
     display: block;
