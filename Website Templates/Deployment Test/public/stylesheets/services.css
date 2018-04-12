@@ -42,10 +42,12 @@ hr{
   font-size: 20px;
   padding: 15px 20%;
   box-sizing: border-box;
-  box-shadow: 0 0 4px #888;
   position: fixed;
   top: 0;
   z-index: 100;
+}
+.navbar.scrolled{
+  box-shadow: 0 0 4px #888;
 }
 .navBarLogoText{
   display: none;

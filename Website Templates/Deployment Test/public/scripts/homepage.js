@@ -1,3 +1,10 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0,0);
+}
+
+var width = $('.intro').outerHeight()
+$('.intro').css('height','' + width)
+
 function navBar(){
   navBarToggle = $('.navBarToggle')
   obj = document.getElementById("navBarLinks")
@@ -10,6 +17,26 @@ function navBar(){
     obj.style.maxHeight = obj.scrollHeight + 'px'
   }
 }
+
+setTimeout(function() {
+  $('.introMain').addClass('animate')
+},350)
+
+setTimeout(function() {
+  $('.introP').addClass('animate')
+},650)
+setTimeout(function() {
+  $('.navBar').css('opacity','1')
+},750)
+
+$(window).scroll(function() {
+  var navBar = $('.navBar')
+  if($(window).scrollTop() > 100){
+    navBar.addClass('scrolled')
+  } else {
+    navBar.removeClass('scrolled')
+  }
+})
 
 
 function accordianToggle(thing) {
