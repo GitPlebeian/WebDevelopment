@@ -13,22 +13,22 @@ hr{
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 9px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #fff;
+    background: #eee;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #f9585a;
+    background: #777;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #e9484a;
+    background: #666;
 }
 .themedContainer{
   border-radius: 4px;
@@ -45,9 +45,10 @@ hr{
   position: fixed;
   top: 0;
   z-index: 100;
+  transition: 0.8s opacity, box-shadow 0.3s;
 }
-.navbar.scrolled{
-  box-shadow: 0 0 4px #888;
+.navBar.scrolled{
+  box-shadow: 0 0 4px #666;
 }
 .navBarLogoText{
   display: none;

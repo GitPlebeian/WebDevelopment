@@ -2,9 +2,6 @@ window.onbeforeunload = function () {
   window.scrollTo(0,0);
 }
 
-var width = $('.intro').outerHeight()
-$('.intro').css('height','' + width)
-
 function navBar(){
   navBarToggle = $('.navBarToggle')
   obj = document.getElementById("navBarLinks")
@@ -31,10 +28,14 @@ setTimeout(function() {
 
 $(window).scroll(function() {
   var navBar = $('.navBar')
-  if($(window).scrollTop() > 100){
+  if($(window).scrollTop() > 72){
     navBar.addClass('scrolled')
   } else {
     navBar.removeClass('scrolled')
+  }
+
+  if($(window).scrollTop() > 10){
+    $('.intro').css('height', '400px')
   }
 })
 

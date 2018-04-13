@@ -10,9 +10,6 @@ function navBar(){
     obj.style.maxHeight = obj.scrollHeight + 'px'
   }
 }
-document.scroll(function() {
-  console.log('asdf');
-})
 
 
 function accordianToggle(thing) {

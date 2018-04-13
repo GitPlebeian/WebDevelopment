@@ -53,6 +53,7 @@ ul{
   padding-top: 85px;
   height: 100vh;
   box-sizing: border-box;
+  transition: 1s;
 }
 .introMain{
   color: #444;
@@ -134,7 +135,7 @@ ul{
   top: 0;
   z-index: 100;
   opacity: 0;
-  transition: 1s opacity;
+  transition: 0.8s opacity, box-shadow 0.3s;
 }
 .navBar.scrolled{
   box-shadow: 0 0 4px #666;
@@ -162,12 +163,6 @@ ul{
 }
 .navBar a:hover::before{
   width: 100%;
-}
-@media (min-width: 1215px){
-  .container{
-    margin-left: 10%;
-    margin-right: 10%;
-  }
 }
 
 @media (min-width: 993px){
@@ -291,6 +286,7 @@ ul{
     font-weight: 300;
   }
   .navBar{
+    box-shadow: 0 0 4px #666;
     padding: 0;
   }
   .navBar .navBarLinks{
