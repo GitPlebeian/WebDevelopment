@@ -286,8 +286,10 @@ ul{
     font-weight: 300;
   }
   .navBar{
-    box-shadow: 0 0 4px #666;
     padding: 0;
+  }
+  .navBar.active{
+    box-shadow: 0 0 4px #666;
   }
   .navBar .navBarLinks{
     max-height: 0;
