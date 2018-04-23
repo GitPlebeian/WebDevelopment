@@ -1,0 +1,13 @@
+C 000001 John Smith
+O 15  14.52 Printer Paper (500 Sheets)
+O  1 125.99 Toner (Black)
+O  1  89.99 Toner (Blue)
+O  1  89.99 Toner (Magenta)
+O  1  89.99 Toner (Yellow)
+C 000002 Fred "Sweet Tooth" Jones
+O 3 14.99 Jelly Belly (Sour Fruit)
+O 3 14.99 Jelly Belly (Sizzling Cinnamon)
+O 3 14.99 Jelly Belly (Sour Apple)
+O 4 22.49 Aimee's Toffee (Dark Chocalate)
+O 5 22.49 Aimee's Toffee (Salted Caramel)
+X
