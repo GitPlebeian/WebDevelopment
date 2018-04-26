@@ -4,6 +4,7 @@ function navBar(){
 
   $(obj).css('color',"red")
   navBarToggle.toggleClass("active")
+  $('.navBar').toggleClass('active')
   if(obj.style.maxHeight){
     obj.style.maxHeight = null
   } else {
