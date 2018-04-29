@@ -124,7 +124,7 @@ hr{
   transform: translate(-50%,-50%);
 }
 .content {
-  padding: 0 20%;
+  padding: 0 10%;
   padding-top: calc(54px + 2.5%);
   overflow: hidden;
 }
@@ -247,12 +247,16 @@ hr{
   .navBar{
     padding: 0;
   }
+  .navBar.active{
+    transition: box-shadow 0s;
+    box-shadow: 0 0 4px #666;
+  }
   .navBar .navBarLinks{
     max-height: 0;
     overflow: hidden;
     float: left;
     width: 100%;
-    transition: 0.25s;
+    transition: 0.3s;
   }
   .navBar a{
     display: block;
@@ -296,15 +300,16 @@ hr{
   .navBarTogglePart:nth-child(2){
     margin-bottom: 8px;
   }
-  .active .navBarTogglePart:nth-child(1){
-    -webkit-transform: rotate(50deg) translate(0,0);
+  .navBarToggle.active .navBarTogglePart:nth-child(1){
+    -webkit-transform: translate(0,9px) rotate(-135deg);
     transform: translate(0,9px) rotate(-135deg);
   }
-  .active .navBarTogglePart:nth-child(2){
+  .navBarToggle.active .navBarTogglePart:nth-child(2){
+    -webkit-transform: translate(35px, 0);
     transform: translate(35px,0)
   }
-  .active .navBarTogglePart:nth-child(3){
-    -webkit-transform: rotate(50deg) translate(0,0);
+  .navBarToggle.active .navBarTogglePart:nth-child(3){
+    -webkit-transform:  translate(0,-9px) rotate(135deg);
     transform: translate(0,-9px) rotate(135deg);
   }
 }
