@@ -5,14 +5,14 @@ var path = require("path");
 var User = require("./models/user");
 var router = express.Router();
 
-//function ensureAuthenticated(req, res, next) {
+// function ensureAuthenticated(req, res, next) {
 //  if (req.isAuthenticated()) {
 //    next();
 //  } else {
 //    req.flash("info", "You must be logged in to see this page.");
 //    res.redirect("/login");
 //  }
-//}
+// }
 
 router.use(function(req, res, next) {
   res.locals.currentUserjy = req.user;
