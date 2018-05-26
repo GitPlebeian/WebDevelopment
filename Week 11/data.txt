@@ -1,6 +1,0 @@
-P Bobby 110
-P Dil 340
-P Dick 790
-P Rob 50
-P Sid 2
-X
