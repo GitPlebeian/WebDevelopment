@@ -9,52 +9,49 @@ const sgMail = require('@sendgrid/mail');
 // sgMail.setApiKey(apiKey());
 
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 
-app.get("/", function(req,res){
+app.get("/", function(req, res) {
 	console.log("Someone connected to home")
 	res.render("homepage");
 });
-app.get("/websites", function(req,res){
-	res.render("websites");
+
+app.get("/traffic", function(req, res) {
+	if (req.body.password == '1234') {
+		res.render('admin');
+	}
+	res.render('admin');
 });
-app.get("/contact", function(req,res){
+app.get('/trafficData', function(req, res) {
+	res.send('asdfgh')
+})
+
+app.get("/skills", function(req, res) {
+	res.render("skills");
+});
+app.get("/contact", function(req, res) {
 	res.render("contact");
 });
-app.get("/services", function(req,res){
+app.get("/services", function(req, res) {
 	res.render("services");
 });
-app.post("/contact", function(req,res){
+app.post("/contact", function(req, res) {
 	console.log("Sending Email");
 	const msg = {
-	to: 'jaxtubbs@gmail.com',
-	from: '' + req.body.email,
-	subject: '' + req.body.subject,
-	text: '' + req.body.message,
-	html: '<p>' + req.body.message + '</p>',
+		to: 'jaxtubbs@gmail.com',
+		from: '' + req.body.email,
+		subject: '' + req.body.subject,
+		text: '' + req.body.message,
+		html: '<p>' + req.body.message + '</p>',
 	};
 	sgMail.send(msg);
 	res.redirect('/');
 });
 
-app.get("/websites/flower", function(req,res){
-	res.render("websites/flower.ejs");
-});
-app.get("/websites/glass", function(req,res){
-	res.render("websites/glass.ejs");
-});
-app.get("/websites/homeDetail", function(req,res){
-	res.render("websites/homeDetail");
-});
-app.get("/websites/photography", function(req,res){
-	res.render("websites/photography");
-});
-
-
-
-
-app.listen(5000, function(){
+app.listen(5000, function() {
 	console.log("Starting Server");
 });

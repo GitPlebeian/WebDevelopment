@@ -4,6 +4,7 @@ body{
   padding: 0px;
   box-sizing: border-box;
   background-color: #fff;
+  font-size: 20px;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -49,7 +50,7 @@ a{
 }
 .navBar a{
   text-decoration: none;
-  color: #212121;
+  color: #444;
   letter-spacing: 1px;
   margin: 0 10px;
   position: relative;
@@ -67,6 +68,55 @@ a{
 }
 .navBar a:hover::before{
   width: 100%;
+}
+.accordian .accordianToggle{
+  width: 100%;
+  background-color: #16a5f9;
+  /* background-color: #444; */
+  padding: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+}
+.accordian .accordianToggle p{
+  margin: 0;
+  color: #fff;
+  display: inline-block;
+}
+.accordianContent{
+  background-color: #fff;
+  border: #16a5f9 0px solid;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ;
+  padding: 0 8px;
+  z-index: 4;
+}
+.accordianToggleAnimation{
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.accordianToggleAnimationPart{
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  transform: translate(-50%,-50%);
+  transition: 0.25s;
+}
+.accordianToggleAnimationPart:nth-child(1){
+  transform: translate(-7.5px,-1px) rotate(90deg);
+}
+.accordianToggle.active .accordianToggleAnimationPart:nth-child(1){
+  transform: translate(-50%,-50%);
 }
 .text{
   color: white;
@@ -87,8 +137,8 @@ a{
   color: white;
   font-size: 24px;
   overflow: auto;
-  background-color: #16a5f9;
-  border: 10px solid #16a5f9;
+  background-color: #f9585a;
+  padding: 10px;
   text-align: center;
 }
 .container{
@@ -201,6 +251,9 @@ a{
     width: 100%;
     margin-left: 0px;
   }
+  .accordian{
+    font-size: 16px;
+  }
   .text{
     font-size: 21px;
     padding: 7px;
@@ -218,6 +271,9 @@ a{
     float: left;
     width: 100%;
     transition: 0.3s;
+  }
+  .navBarLinks .main{
+    display: none;
   }
   .navBar a{
     display: block;
@@ -249,7 +305,7 @@ a{
     cursor: pointer;
   }
   .navBarTogglePart{
-    background-color: #212121;
+    background-color: #444;
     width: 25px;
     height: 1px;
     position: relative;

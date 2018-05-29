@@ -1,0 +1,29 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  padding: 10px;
+  font-size: 20px;
+}
+.button{
+	padding: 8px;
+	color: white;
+	background: #444;
+	transition: 0.2s;
+}
+.button:hover{
+	border-radius: 15px;
+}
+.data{
+	list-style-type: 
+}
+.numTimes{
+	color: #2f00ff;
+}
+@media (max-width: 576px){
+	body{
+		font-size: 15px;
+	}
+}

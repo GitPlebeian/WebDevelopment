@@ -25,6 +25,7 @@ input{
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
   border: none;
+  border-radius: 0;
   outline: none;
   width: 100%;
   font-size: 20px;
@@ -202,15 +203,16 @@ label{
 @media (max-width: 576px) {
   input{
     font-size: 16px;
+    border-radius: 0;
   }
   form{
-    border-radius: 6px;
     top: 72px;
     margin: 0 2.5%;
     width: 95%;
   }
   textarea{
     font-size: 16px;
+    border-radius: 0;
   }
   div[class*="col"]{
     width: 100%;
@@ -229,6 +231,9 @@ label{
     float: left;
     width: 100%;
     transition: 0.3s;
+  }
+  .navBarLinks .main{
+    display: none;
   }
   .navBar a{
     display: block;
