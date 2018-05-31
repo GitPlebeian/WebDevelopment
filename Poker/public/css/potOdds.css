@@ -1,0 +1,28 @@
+p{
+	margin: 0;
+}
+.newSet{
+	background-color: #51b84a;
+	font-size: 22px;
+}
+input,.currentPot,.playerBet{
+	display: none;
+}
+input{
+	border-radius: 4px;
+	border: none;
+	padding: 2.5%;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%,0);
+}
+input:focus{
+	outline: none;
+}
+.currentPot, .playerBet{
+	text-align: center;
+	font-size: 60px;
+}
