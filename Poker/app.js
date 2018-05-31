@@ -32,12 +32,51 @@ passport.use(new LocalStrategy(User.authenticate()))
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
+var kittySchema = mongoose.Schema({
+	name: String,
+	is: 0
+});
 
+var Kitten = mongoose.model('Kitten', kittySchema);
+
+// Kitten.find(function(err, kittens) {
+// 	if (err) return console.error(err);
+// 	console.log(kittens);
+// })
+
+// Kitten.find({
+// 	name: /^Silence/
+// }, function(err, data) {
+// 	if (err) {
+// 		console.log(err)
+// 	}
+// 	console.log(data)
+// });
 app.get('/', function(req, res) {
 	res.render('dashboard')
 })
 app.get('/potOdds', function(req, res) {
 	res.render('potOdds')
+})
+
+app.get('/school', function(req, res) {
+	res.render('school')
+})
+app.post('/school', function(req, res) {
+	console.log('Subbmiting to databases')
+	var silence = new Kitten({
+		name: req.body.name,
+		id: req.body.pos
+	});
+	silence.save(function(err, silence) {
+		if (err) return console.error(err);
+	});
+})
+app.get('/school2', function(req, res) {
+	Kitten.find(function(err, kittens) {
+		if (err) return console.error(err);
+		console.log(kittens);
+	})
 })
 
 app.get('/secret', isLoggedIn, function(req, res) {
